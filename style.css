@@ -23,12 +23,24 @@ img.center{
 	cursor:pointer;
 	}
 img.opened{
+	visibility:hidden;
 	width:0px;
 	height:0px;
 	margin-left: -90px;
 	bottom:-280px;
 	position: relative;
 
+}
+img.hide{
+	pointer-events: none; 
+	cursor: default;
+	border:#000 1px solid;
+	width:100px;
+	height:100px;
+	float:left;
+	margin:10px;
+	padding:0px;
+	border-radius: 15px;
 }
 h2{
 	bottom:250px;
@@ -47,8 +59,8 @@ h2{
 h3{
 	bottom:200px;
 	position: absolute;
-	left:40%;
-  	padding: 45px 150px 45px 25px;
+	left:35%;
+  	padding: 45px 250px 45px 25px;
   	font-size: 24px;
   	text-align: left;
   	text-decoration: none;
