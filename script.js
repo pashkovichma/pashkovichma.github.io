@@ -61,8 +61,8 @@ function memoryFlipTile(tile,val){
 			// if the whole board is cleared
 			if(tiles_flipped == memory_array.length){
 				document.getElementById('memory_board').innerHTML = "";
-				alert("Good job! Let's try again");
-				chooseLevel();
+				setTimeout('alert("Good job! Let\'s try again")', 100);
+				setTimeout('chooseLevel()',200);
 			}
 			} else {
 				function flipBack(){
