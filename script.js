@@ -31,7 +31,7 @@ function newBoard(quantity){
 	}
 		memory_array.memory_tile_shuffle();
     	memory_array1.memory_tile_shuffle();
-	    
+	
     for (i = 0; i < memory_array.length; i++){
     	output1 += '<img src = \''+memory_array[i]+'\'>';
     }	
@@ -55,13 +55,14 @@ function memoryFlipTile(tile,val){
 	tile.src = val;
 	var tile1 = document.getElementById(tiles_flipped);
 		if(val == memory_array1[tiles_flipped]){
-			
+			tile.className='hide'
 			tile1.className='opened';
 			tiles_flipped ++;
 			// if the whole board is cleared
 			if(tiles_flipped == memory_array.length){
-				document.getElementById('memory_board').innerHTML = "";
+				
 				setTimeout('alert("Good job! Let\'s try again")', 100);
+				document.getElementById('memory_board').innerHTML = "";
 				setTimeout('chooseLevel()',200);
 			}
 			} else {
