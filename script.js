@@ -24,7 +24,6 @@ function newBoard(quantity){
 	var output = '';
 	var output1 = '';
 	var i;
-	var j;
 	var q;
 	for (q = 0; q<quantity; q++){
 		memory_array[q] = etalon_array[q];
@@ -32,13 +31,7 @@ function newBoard(quantity){
 	}
 		memory_array.memory_tile_shuffle();
     	memory_array1.memory_tile_shuffle();
-	
-	function four(){i=4};
-	function five(){i=5};
-	function six(){i=6};
-	function seven(){i=7};
-	function eight(){i=8};
-    
+	    
     for (i = 0; i < memory_array.length; i++){
     	output1 += '<img src = \''+memory_array[i]+'\'>';
     }	
@@ -46,7 +39,7 @@ function newBoard(quantity){
     
     document.getElementById('memory_board').innerHTML = output1;
     for(i = 0; i < memory_array.length; i++){
-		output += '<img id="tile_'+i+'" onclick="memoryFlipTile(this,\''+memory_array[i]+'\')" src = "images/tile_bg.jpg" >';
+		output += '<img onclick="memoryFlipTile(this,\''+memory_array[i]+'\')" src = "images/tile_bg.jpg" >';
 	}
 	output += '<h3 >find the card:</h3>'	
 	for (i = memory_array1.length-1; i >= 0 ; --i){
