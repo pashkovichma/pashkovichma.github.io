@@ -1,1 +1,0 @@
-# pashkovichma.github.io
